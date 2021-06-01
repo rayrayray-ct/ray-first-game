@@ -1,0 +1,11 @@
+info.onLifeZero(function () {
+    game.over(false, effects.melt)
+    music.wawawawaa.play()
+})
+game.showLongText("welcome", DialogLayout.Bottom)
+info.setLife(3)
+scene.setBackgroundColor(7)
+let mySprite = sprites.create(assets.image`player`, SpriteKind.Player)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(assets.tile`enemy`, SpriteKind.Enemy)
+mySprite2.follow(mySprite, 12)
